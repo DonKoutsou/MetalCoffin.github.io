@@ -1,0 +1,138 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: WIKI
+email:
+description: >- # this means to ignore newlines until "baseurl:"
+  Ένα μικρό προσωπικό Wiki για την καταγραφή διαφόρων γνώσεων επάνω στο 3D και στην δημιουργία video-game.
+github_username: DonKoutsou
+minimal_mistakes_skin: dark
+search: true
+logo: "/assets/images/ΜΧΨLogoTrans.png"
+# Build settings
+markdown: kramdown
+remote_theme: mmistakes/minimal-mistakes
+# Outputting
+permalink: /:categories/:title/
+paginate: 5 # amount of posts to show
+paginate_path: /page:num/
+timezone: 
+#teaser: /assets/images/bio-photo.jpg
+include:
+  - _pages
+date_format: "%d-%B-%Y"
+
+lunr:
+  search_within_pages: true
+  search_full_content : true
+
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
+# Plugins (previously gems:)
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+
+author:
+
+  
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/DonKoutsou"
+    - label: "ArtStation"
+      icon: "fab fa-fw fa-artstation"
+      url: "https://www.artstation.com/koutsou"
+    - label: "Itch"
+      icon: "fab fa-fw fa-itch-io"
+      url: "https://mxpsi.itch.io/"
+    - label: "Discord Server"
+      icon: "fab fa-fw fa-discord"
+      url: "https://discord.gg/Ue2qX7ZU9C"
+    - label: "Ko-fi"
+      icon: "fas fa-fw fa-coffee"
+      url: "https://ko-fi.com/koutsou"
+
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/DonKoutsou"
+    - label: "ArtStation"
+      icon: "fab fa-fw fa-artstation"
+      url: "https://www.artstation.com/koutsou"
+    - label: "Itch"
+      icon: "fab fa-fw fa-itch-io"
+      url: "https://mxpsi.itch.io/"
+    - label: "Discord Server"
+      icon: "fab fa-fw fa-discord"
+      url: "https://discord.gg/Ue2qX7ZU9C"
+    - label: "Ko-fi"
+      icon: "fas fa-fw fa-coffee"
+      url: "https://ko-fi.com/koutsou"
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: false
+      comments: false
+      share: false
+      related: false
+      tags : true
+      show_date : true
+      toc: true
+        
+      author_profile: true
+      #header:
+      #  overlay_filter: 0.25
+      #  overlay_image: /assets/images/bio-photo.jpg
+      #  caption: "Photo credit: [**Oddworld inhabitants**](http://www.oddworld.com/)"
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+      #header:
+      #  overlay_filter: 0.25
+      #  overlay_image: /assets/images/bio-photo.jpg
+      #  caption: "Photo credit: [**Oddworld inhabitants**](http://www.oddworld.com/)"
+
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
