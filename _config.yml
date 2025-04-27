@@ -13,23 +13,27 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: WIKI
+title: Metal Coffin
 email:
 description: >- # this means to ignore newlines until "baseurl:"
-  Ένα μικρό προσωπικό Wiki για την καταγραφή διαφόρων γνώσεων επάνω στο 3D και στην δημιουργία video-game.
+  Metal Coffin Official Website.
 github_username: DonKoutsou
 minimal_mistakes_skin: dark
-search: true
+search: false
 logo: "/assets/images/ΜΧΨLogoTrans.png"
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM
+
+
 remote_theme: mmistakes/minimal-mistakes
 # Outputting
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
 timezone: 
-#teaser: /assets/images/bio-photo.jpg
+#teaser: "/assets/images/ΜΧΨLogoTrans.png"
 include:
   - _pages
 date_format: "%d-%B-%Y"
@@ -66,37 +70,31 @@ author:
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/DonKoutsou"
-    - label: "ArtStation"
-      icon: "fab fa-fw fa-artstation"
-      url: "https://www.artstation.com/koutsou"
+      url: "https://github.com/DonKoutsou/Metal-Coffin"
     - label: "Itch"
       icon: "fab fa-fw fa-itch-io"
-      url: "https://mxpsi.itch.io/"
+      url: "https://mxpsi.itch.io/metalcoffin"
     - label: "Discord Server"
       icon: "fab fa-fw fa-discord"
-      url: "https://discord.gg/Ue2qX7ZU9C"
-    - label: "Ko-fi"
-      icon: "fas fa-fw fa-coffee"
-      url: "https://ko-fi.com/koutsou"
+      url: "https://discord.gg/vbKT5SR5"
+    #- label: "Ko-fi"
+    #  icon: "fas fa-fw fa-coffee"
+    #  url: "https://ko-fi.com/koutsou"
 
 footer:
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/DonKoutsou"
-    - label: "ArtStation"
-      icon: "fab fa-fw fa-artstation"
-      url: "https://www.artstation.com/koutsou"
+      url: "https://github.com/DonKoutsou/Metal-Coffin"
     - label: "Itch"
       icon: "fab fa-fw fa-itch-io"
-      url: "https://mxpsi.itch.io/"
+      url: "https://mxpsi.itch.io/metalcoffin"
     - label: "Discord Server"
       icon: "fab fa-fw fa-discord"
-      url: "https://discord.gg/Ue2qX7ZU9C"
-    - label: "Ko-fi"
-      icon: "fas fa-fw fa-coffee"
-      url: "https://ko-fi.com/koutsou"
+      url: "https://discord.gg/vbKT5SR5"
+    #- label: "Ko-fi"
+    #  icon: "fas fa-fw fa-coffee"
+    #  url: "https://ko-fi.com/koutsou"
 defaults:
   # _posts
   - scope:
@@ -112,12 +110,10 @@ defaults:
       tags : true
       show_date : true
       toc: true
-        
-      author_profile: true
-      #header:
-      #  overlay_filter: 0.25
-      #  overlay_image: /assets/images/bio-photo.jpg
-      #  caption: "Photo credit: [**Oddworld inhabitants**](http://www.oddworld.com/)"
+      header:
+        overlay_filter: 0.25
+        overlay_image: "/assets/images/tbrender.png"
+
   # _pages
   - scope:
       path: "_pages"
@@ -125,10 +121,11 @@ defaults:
     values:
       layout: single
       author_profile: true
-      #header:
-      #  overlay_filter: 0.25
-      #  overlay_image: /assets/images/bio-photo.jpg
-      #  caption: "Photo credit: [**Oddworld inhabitants**](http://www.oddworld.com/)"
+      header:
+        overlay_filter: 0.25
+        overlay_image: "/assets/images/tbrender.png"
+
+
 
 category_archive:
   type: liquid

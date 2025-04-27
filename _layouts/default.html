@@ -13,7 +13,10 @@
     {% include head.html %}
     {% include head/custom.html %}
   </head>
-
+  <head>
+    ...
+    
+</head>
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
     {% include_cached skip-links.html %}
     {% include_cached masthead.html %}
@@ -35,14 +38,19 @@
       </footer>
     </div>
     {% include scripts.html %}
-    <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+    <script src="https://www.steamwidgets.net/api/resource/query?type=js&module=STEAM_WIDGETS_MODULE&version=v1"></script>
+
+    <steam-app appid="3551150"></steam-app>
+
+    
+    <!--<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
     <script>
       kofiWidgetOverlay.draw('koutsou', {
         'type': 'floating-chat',
         'floating-chat.donateButton.text': 'Support Me',
         'floating-chat.donateButton.background-color': '#794bc4',
         'floating-chat.donateButton.text-color': '#fff'
-      });
+      });-->
     </script>
   </body>
 </html>
